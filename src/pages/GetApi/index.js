@@ -7,11 +7,7 @@ function GetApi() {
 
     const [state, setstate] = useState([])
     const { start , limit } = useParams();
-    const history = useHistory()
-
-    useEffect(() => {
-         history.push('/Getapi/1/10')
-    }, [])
+ 
     
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/posts?_start=${start}&_limit=${limit}`)
